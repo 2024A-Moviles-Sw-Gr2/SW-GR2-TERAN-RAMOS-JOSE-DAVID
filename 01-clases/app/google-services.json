@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "173696122148",
+    "project_id": "jdtr-2024a-sw-gr2",
+    "storage_bucket": "jdtr-2024a-sw-gr2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:173696122148:android:60d0b59cb8bc8274cb07b1",
+        "android_client_info": {
+          "package_name": "com.example.a2024aswgr2jdtr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAftGC3tsJAZ2ux2UKXRCsIogVUGDrd10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
