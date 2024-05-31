@@ -1,0 +1,4 @@
+1, Guitarra Eléctrica, 550.0, Cuerdas
+2, Piano, 1500.0, Teclado
+4, Violín, 700.0, Cuerdas
+5, Flauta, 300.0, Vientos
