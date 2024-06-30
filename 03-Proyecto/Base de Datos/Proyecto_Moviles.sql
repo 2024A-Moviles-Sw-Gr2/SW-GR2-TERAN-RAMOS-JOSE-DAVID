@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      PostgreSQL 8                                 */
-/* Created on:     29/6/2024 21:52:32                           */
+/* Created on:     29/6/2024 22:15:25                           */
 /*==============================================================*/
 
 
@@ -25,6 +25,12 @@ drop index RELATIONSHIP_1_FK;
 drop index ENCOMIENDA_PK;
 
 drop table ENCOMIENDA;
+
+drop index RELATIONSHIP_7_FK2;
+
+drop index PAGO_PK;
+
+drop table PAGO;
 
 drop index RELATIONSHIP_5_FK;
 
@@ -141,6 +147,35 @@ ID_VIAJE
 );
 
 /*==============================================================*/
+/* Table: PAGO                                                  */
+/*==============================================================*/
+create table PAGO (
+   ID_PAGO              INT4                 not null,
+   ID_RESERVA           INT4                 null,
+   MONTO_TOTAL          DECIMAL              null,
+   FECHA_PAGO           DATE                 null,
+   NUM_TARJETA          TEXT                 null,
+   TITULAR_TARJETA      TEXT                 null,
+   FECHA_EXPIRACION     DATE                 null,
+   CODIGO_SEGURIDAD     INT4                 null,
+   constraint PK_PAGO primary key (ID_PAGO)
+);
+
+/*==============================================================*/
+/* Index: PAGO_PK                                               */
+/*==============================================================*/
+create unique index PAGO_PK on PAGO (
+ID_PAGO
+);
+
+/*==============================================================*/
+/* Index: RELATIONSHIP_7_FK2                                    */
+/*==============================================================*/
+create  index RELATIONSHIP_7_FK2 on PAGO (
+ID_RESERVA
+);
+
+/*==============================================================*/
 /* Table: RESERVA                                               */
 /*==============================================================*/
 create table RESERVA (
@@ -149,6 +184,7 @@ create table RESERVA (
    DIRECCION_ORIGEN     TEXT                 null,
    DIRECCION_DESTINO    TEXT                 null,
    NUMERO_PUESTOS       INT4                 null,
+   COSTO_RESERVA        DECIMAL              null,
    constraint PK_RESERVA primary key (ID_RESERVA)
 );
 
@@ -235,6 +271,11 @@ alter table CLIENTE_RESERVA
 alter table ENCOMIENDA
    add constraint FK_ENCOMIEN_RELATIONS_VIAJE foreign key (ID_VIAJE)
       references VIAJE (ID_VIAJE)
+      on delete restrict on update restrict;
+
+alter table PAGO
+   add constraint FK_PAGO_RELATIONS_RESERVA foreign key (ID_RESERVA)
+      references RESERVA (ID_RESERVA)
       on delete restrict on update restrict;
 
 alter table RESERVA
