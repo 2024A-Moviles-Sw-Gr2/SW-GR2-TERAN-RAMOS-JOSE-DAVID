@@ -2,9 +2,75 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/cl_sqlite"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ECrudEntrenador">
 
+    <Button
+        android:id="@+id/btn_actualizar_bdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Actualizar"
+        app:layout_constraintStart_toEndOf="@+id/btn_crear_bdd"
+        tools:layout_editor_absoluteY="341dp" />
+
+    <Button
+        android:id="@+id/btn_buscar_bdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="Buscar"
+        app:layout_constraintEnd_toStartOf="@+id/btn_crear_bdd"
+        tools:layout_editor_absoluteY="341dp" />
+
+    <Button
+        android:id="@+id/btn_crear_bdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="341dp" />
+
+    <Button
+        android:id="@+id/btn_eliminar_bdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Eliminar"
+        app:layout_constraintEnd_toEndOf="@+id/btn_actualizar_bdd"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="@+id/btn_buscar_bdd"
+        app:layout_constraintTop_toBottomOf="@+id/btn_crear_bdd" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_id"
+        android:layout_width="301dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="32dp"
+        android:hint="Id"
+        app:layout_constraintBottom_toTopOf="@+id/input_nombre"
+        app:layout_constraintEnd_toEndOf="@+id/input_nombre"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/input_nombre" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_nombre"
+        android:layout_width="301dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="32dp"
+        android:hint="Nombre"
+        app:layout_constraintBottom_toTopOf="@+id/input_descripcion"
+        app:layout_constraintEnd_toEndOf="@+id/input_descripcion"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/input_descripcion" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_descripcion"
+        android:layout_width="301dp"
+        android:layout_height="66dp"
+        android:hint="Descripcion"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="218dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
