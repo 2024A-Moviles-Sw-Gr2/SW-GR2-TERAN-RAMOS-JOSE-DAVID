@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_instrumentos"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_beditar_tienda">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_nombre_tienda"
+        android:layout_width="319dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="124dp"
+        android:hint="Nombre Tienda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_direccion_tienda"
+        android:layout_width="312dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="40dp"
+        android:hint="Direccion Tienda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_nombre_tienda" />
+
+    <Button
+        android:id="@+id/id_btn_guardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="Guardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_direccion_tienda" />
+</androidx.constraintlayout.widget.ConstraintLayout>
