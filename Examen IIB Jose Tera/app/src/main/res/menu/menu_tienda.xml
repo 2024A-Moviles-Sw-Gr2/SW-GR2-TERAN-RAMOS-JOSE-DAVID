@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/id_mi_editar_tienda"
+        android:title="Editar" />
+    <item
+        android:id="@+id/id_mi_eliminar_tienda"
+        android:title="Eliminar" />
+    <item
+        android:id="@+id/id_mi_ver_instrumentos"
+        android:title="Ver Instrumentos" />
+</menu>
